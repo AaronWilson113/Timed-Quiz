@@ -2,7 +2,7 @@ var body = document.body;
 //array for questions
 var questionsArray = ["question 1 placeholder" , "question 2 placeholder" , "question 3 placeholder" , "question 4 placeholder" , "question 5 placeholder"];
 //var to create my question element
-var questionAsked = document.createElement("h1");
+var questionAsked = document.querySelector("#title");
 //var for my start button
 var startQuiz = document.querySelector("#start-quiz");
 
@@ -16,7 +16,7 @@ startQuiz.addEventListener("click" , beginTheQuiz)
 function beginTheQuiz(array) {
 
     var randomQuestion = questionsArray[Math.floor(Math.random() * questionsArray.length)];
-    body.append(randomQuestion);
+    questionAsked.appendChild(randomQuestion);
 
     
 }
