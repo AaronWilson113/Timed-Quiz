@@ -23,9 +23,15 @@ function beginTheQuiz() {
 
 //start timer function
 function startTimer() {
-    timer = setInterval(function() {
-
-
-    })
+   
+   var timeLeft = 60;
+    
+   var timer = setInterval(function() {
+        
+        if (timeLeft > 1) {
+            timerTextEl.textContent = timeLeft 
+            timeLeft--;
+        }
+    }, 1000);
 }
 
