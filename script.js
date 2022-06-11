@@ -1,3 +1,14 @@
+var questions = [
+    {title: "question1 title" , choices: "choices1 placeholder" , correctAnswer: "answer1placeholder"} ,
+    {title: "question2 title" , choices: "choices2 placeholder" , correctAnswer: "answer2placeholder"} ,
+    {title: "question3 title" , choices: "choices3 placeholder" , correctAnswer: "answer3placeholder"} ,
+    {title: "question4 title" , choices: "choices4 placeholder" , correctAnswer: "answer4placeholder"} ,
+    {title: "question5 title" , choices: "choices5 placeholder" , correctAnswer: "answer5placeholder"} ,
+]
+
+
+
+
 var body = document.body;
 
 // selecting welcome page elements 
