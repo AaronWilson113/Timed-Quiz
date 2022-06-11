@@ -6,3 +6,16 @@
 //when question is answered right add points to score and render next question,
 //if answer is wrong remove time from timer and render next question
 //when game ends, stop timer and render the score to screen with and option to add initials and store high score
+
+
+//var for my start button
+var startQuiz = document.querySelector("#start-quiz");
+
+
+
+//addEvent listener to render first question to the page 
+startQuiz.addEventListener("click" , beginTheQuiz)
+
+function beginTheQuiz() {
+    enter = parseInt(prompt("Choose a number, any number, between 8 and 128"));
+}
