@@ -1,4 +1,4 @@
-var questions = [
+var questionsEl = [
     {title: "question1 title" , choices: "choices1 placeholder" , correctAnswer: "answer1placeholder"} ,
     {title: "question2 title" , choices: "choices2 placeholder" , correctAnswer: "answer2placeholder"} ,
     {title: "question3 title" , choices: "choices3 placeholder" , correctAnswer: "answer3placeholder"} ,
@@ -8,8 +8,9 @@ var questions = [
 
 
 
-
+//Variables
 var body = document.body;
+var currentQuestion = 0
 
 // selecting welcome page elements 
 var startQuizBtn = document.querySelector("#start-quiz");
@@ -17,6 +18,9 @@ var welcomePageEl = document.querySelector("#welcome-page")
 //selecting header / timer elements 
 var timerEl = document.querySelector("#timer")
 var timerTextEl = document.querySelector("#timer-text")
+//Selecting quiz elements 
+var chosenQuestionEl = document.querySelector("#question");
+var chosenAnswerEl = document.querySelector("#answer");
 
 
 
@@ -29,7 +33,8 @@ startQuizBtn.addEventListener("click" , beginTheQuiz)
 function beginTheQuiz() {
 
 
-    startTimer()
+    startTimer();
+    renderQuestion();
 }
 
 //start timer function
@@ -44,5 +49,16 @@ function startTimer() {
             timeLeft--;
         }
     }, 1000);
+}
+
+// function to render first question to the page
+function renderQuestion() {
+
+    chosenQuestionEl.textContent = questionsEl[currentQuestion].title
+    
+    for (let i = 0; i <chosenAnswerEl; i++) {
+        chosenAnswerEl.children[i].children[0].textContent =`${(i + 1)}: ${questionsEl[currentQuestion].choices[i]}`;
+
+    }
 }
 
