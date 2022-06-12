@@ -315,6 +315,7 @@ function renderQuestion5() {
 
     fifthchosenAnswer0El.addEventListener("click" , function(){
         fifthwrongRightEl.textContent = "RIGHT :)";
+        fourthwrongRightEl.style.display = "none";
         score += 5;
         console.log(score);
         removeEventListener;
@@ -322,6 +323,7 @@ function renderQuestion5() {
 
     fifthchosenAnswer1El.addEventListener("click" , function(){
         fifthwrongRightEl.textContent = "WRONG";
+        fourthwrongRightEl.style.display = "none";
         timeLeft -=10;
         removeEventListener;
        
@@ -329,18 +331,22 @@ function renderQuestion5() {
 
     fifthchosenAnswer2El.addEventListener("click" , function(){
         fifthwrongRightEl.textContent = "WRONG";
+        fourthwrongRightEl.style.display = "none";
         timeLeft -=10;
         removeEventListener;
     }, {once :true})
 
     fifthchosenAnswer3El.addEventListener("click" , function(){
         fifthwrongRightEl.textContent = "WRONG";
+        fourthwrongRightEl.style.display = "none";
         timeLeft -=10;
         removeEventListener;
        
     }, {once :true})
 
 }
+
+console.log(score);
 
 
 
