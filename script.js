@@ -51,7 +51,7 @@ function startTimer() {
     }, 1000);
 }
 
-// function to render first question to the page
+// function to render first question to the page 
 function renderQuestion() {
 
     chosenQuestionEl.textContent = questionsEl[currentQuestion].title
@@ -61,7 +61,19 @@ function renderQuestion() {
     chosenAnswer3El.textContent = questionsEl[currentQuestion].choices[3]
 
     chosenAnswer0El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+    })
 
+    chosenAnswer1El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+    })
+
+    chosenAnswer2El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+    })
+
+    chosenAnswer3El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
     })
 
 }
