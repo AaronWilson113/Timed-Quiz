@@ -21,7 +21,10 @@ var timerTextEl = document.querySelector("#timer-text")
 //Selecting quiz elements 
 var chosenQuestionEl = document.querySelector("#question");
 var chosenChoicesEl = document.querySelector("#choices")
-var chosenAnswerEl = document.querySelector("#answer");
+var chosenAnswer0El = document.querySelector("#answer0");
+var chosenAnswer1El = document.querySelector("#answer1");
+var chosenAnswer2El = document.querySelector("#answer2");
+var chosenAnswer3El = document.querySelector("#answer3");
 
 
 
@@ -52,6 +55,9 @@ function startTimer() {
 function renderQuestion() {
 
     chosenQuestionEl.textContent = questionsEl[currentQuestion].title
-    chosenAnswerEl.textContent = questionsEl[currentQuestion].choices
+    chosenAnswer0El.textContent = questionsEl[currentQuestion].choices[0]
+    chosenAnswer1El.textContent = questionsEl[currentQuestion].choices[1]
+    chosenAnswer2El.textContent = questionsEl[currentQuestion].choices[2]
+    chosenAnswer3El.textContent = questionsEl[currentQuestion].choices[3]
 }
 
