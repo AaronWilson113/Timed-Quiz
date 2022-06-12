@@ -24,14 +24,51 @@ var welcomePageEl = document.querySelector("#welcome-page")
 //selecting header / timer elements 
 var timerEl = document.querySelector("#timer")
 var timerTextEl = document.querySelector("#timer-text")
-//Selecting quiz elements 
-var chosenQuestionEl = document.querySelector("#question");
-var chosenChoicesEl = document.querySelector("#choices")
-var chosenAnswer0El = document.querySelector("#answer0");
-var chosenAnswer1El = document.querySelector("#answer1");
-var chosenAnswer2El = document.querySelector("#answer2");
-var chosenAnswer3El = document.querySelector("#answer3");
-var wrongRightEl = document.querySelector("#wrong-right")
+//Selecting 1st quiz page elements  
+var firstquestionPageEl = document.querySelector("#firstquestion-page")
+var firstchosenQuestionEl = document.querySelector("#firstquestion");
+var firstchosenChoicesEl = document.querySelector("#firstchoices")
+var firstchosenAnswer0El = document.querySelector("#firstanswer0");
+var firstchosenAnswer1El = document.querySelector("#firstanswer1");
+var firstchosenAnswer2El = document.querySelector("#firstanswer2");
+var firstchosenAnswer3El = document.querySelector("#firstanswer3");
+var firstwrongRightEl = document.querySelector("#firstwrong-right")
+//Selecting 2nd quiz page elements 
+var secondquestionPageEl = document.querySelector("#secondquestion-page")
+var secondchosenQuestionEl = document.querySelector("#secondquestion");
+var secondchosenChoicesEl = document.querySelector("#secondchoices")
+var secondchosenAnswer0El = document.querySelector("#secondanswer0");
+var secondchosenAnswer1El = document.querySelector("#secondanswer1");
+var secondchosenAnswer2El = document.querySelector("#secondanswer2");
+var secondchosenAnswer3El = document.querySelector("#secondanswer3");
+var secondwrongRightEl = document.querySelector("#secondwrong-right")
+//Selecting 3rd quiz page elements
+var thirdquestionPageEl = document.querySelector("#thirdquestion-page")
+var thirdchosenQuestionEl = document.querySelector("#thirdquestion");
+var thirdchosenChoicesEl = document.querySelector("#thirdchoices")
+var thirdchosenAnswer0El = document.querySelector("#thirdanswer0");
+var thirdchosenAnswer1El = document.querySelector("#thirdanswer1");
+var thirdchosenAnswer2El = document.querySelector("#thirdanswer2");
+var thirdchosenAnswer3El = document.querySelector("#thirdanswer3");
+var thirdwrongRightEl = document.querySelector("#thirdwrong-right")
+//Selecting 4th quiz page elements
+var fourthquestionPageEl = document.querySelector("#fourthquestion-page")
+var fourthchosenQuestionEl = document.querySelector("#fourthquestion");
+var fourthchosenChoicesEl = document.querySelector("#fourthchoices")
+var fourthchosenAnswer0El = document.querySelector("#fourthanswer0");
+var fourthchosenAnswer1El = document.querySelector("#fourthanswer1");
+var fourthchosenAnswer2El = document.querySelector("#fourthanswer2");
+var fourthchosenAnswer3El = document.querySelector("#fourthanswer3");
+var fourthwrongRightEl = document.querySelector("#fourthwrong-right")
+//Selecting 5th quiz page elements
+var fifthquestionPageEl = document.querySelector("#fifthquestion-page")
+var fifthchosenQuestionEl = document.querySelector("#fifthquestion");
+var fifthchosenChoicesEl = document.querySelector("#fifthchoices")
+var fifthchosenAnswer0El = document.querySelector("#fifthanswer0");
+var fifthchosenAnswer1El = document.querySelector("#fifthanswer1");
+var fifthchosenAnswer2El = document.querySelector("#fifthanswer2");
+var fifthchosenAnswer3El = document.querySelector("#fifthanswer3");
+var fifthwrongRightEl = document.querySelector("#fifthwrong-right")
 
 
 //addEvent listener to start the quiz
@@ -59,38 +96,38 @@ function startTimer() {
 // function to render first question to the page 
 function renderQuestion() {
 
-    chosenQuestionEl.textContent = questionsEl[currentQuestion].title
-    chosenAnswer0El.textContent = questionsEl[currentQuestion].choices[0]
-    chosenAnswer1El.textContent = questionsEl[currentQuestion].choices[1]
-    chosenAnswer2El.textContent = questionsEl[currentQuestion].choices[2]
-    chosenAnswer3El.textContent = questionsEl[currentQuestion].choices[3]
+    firstchosenQuestionEl.textContent = questionsEl[currentQuestion].title
+    firstchosenAnswer0El.textContent = questionsEl[currentQuestion].choices[0]
+    firstchosenAnswer1El.textContent = questionsEl[currentQuestion].choices[1]
+    firstchosenAnswer2El.textContent = questionsEl[currentQuestion].choices[2]
+    firstchosenAnswer3El.textContent = questionsEl[currentQuestion].choices[3]
 
-    chosenAnswer0El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "Right :)";
+    firstchosenAnswer0El.addEventListener("click" , function(){
+        firstwrongRightEl.textContent = "Right :)";
         score += 5;
         removeEventListener;
         renderQuestion2()
         
     }, {once :true})
 
-    chosenAnswer1El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    firstchosenAnswer1El.addEventListener("click" , function(){
+        firstwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
         renderQuestion2()
         
     }, {once :true})
 
-    chosenAnswer2El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    firstchosenAnswer2El.addEventListener("click" , function(){
+        firstwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
         renderQuestion2()
         
     }, {once :true})
 
-    chosenAnswer3El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    firstchosenAnswer3El.addEventListener("click" , function(){
+        firstwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
         renderQuestion2()
@@ -101,37 +138,44 @@ function renderQuestion() {
 
 //function to render second question to page 
 function renderQuestion2() {
-    chosenQuestionEl.textContent = questionsEl[currentQuestion1].title
-    chosenAnswer0El.textContent = questionsEl[currentQuestion1].choices[0]
-    chosenAnswer1El.textContent = questionsEl[currentQuestion1].choices[1]
-    chosenAnswer2El.textContent = questionsEl[currentQuestion1].choices[2]
-    chosenAnswer3El.textContent = questionsEl[currentQuestion1].choices[3]
 
-    chosenAnswer0El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    firstchosenQuestionEl.style.display = "none";
+    firstchosenAnswer0El.style.display = "none";
+    firstchosenAnswer1El.style.display = "none";
+    firstchosenAnswer2El.style.display = "none";
+    firstchosenAnswer3El.style.display = "none";
+
+    secondchosenQuestionEl.textContent = questionsEl[currentQuestion1].title
+    secondchosenAnswer0El.textContent = questionsEl[currentQuestion1].choices[0]
+    secondchosenAnswer1El.textContent = questionsEl[currentQuestion1].choices[1]
+    secondchosenAnswer2El.textContent = questionsEl[currentQuestion1].choices[2]
+    secondchosenAnswer3El.textContent = questionsEl[currentQuestion1].choices[3]
+
+    secondchosenAnswer0El.addEventListener("click" , function(){
+        secondwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
         renderQuestion3()
         ;
     }, {once :true})
 
-    chosenAnswer1El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    secondchosenAnswer1El.addEventListener("click" , function(){
+        secondwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
         renderQuestion3();
     }, {once :true})
 
-    chosenAnswer2El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "RIGHT :)";
+    secondchosenAnswer2El.addEventListener("click" , function(){
+        secondwrongRightEl.textContent = "RIGHT :)";
         score += 5;
         removeEventListener;
         renderQuestion3()
         ;
     }, {once :true})
 
-    chosenAnswer3El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    secondchosenAnswer3El.addEventListener("click" , function(){
+        secondwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
         renderQuestion3()
@@ -142,38 +186,46 @@ function renderQuestion2() {
 
 //function to render third question to page
 function renderQuestion3() {
-    chosenQuestionEl.textContent = questionsEl[currentQuestion2].title
-    chosenAnswer0El.textContent = questionsEl[currentQuestion2].choices[0]
-    chosenAnswer1El.textContent = questionsEl[currentQuestion2].choices[1]
-    chosenAnswer2El.textContent = questionsEl[currentQuestion2].choices[2]
-    chosenAnswer3El.textContent = questionsEl[currentQuestion2].choices[3]
 
-    chosenAnswer0El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    firstwrongRightEl.style.display = "none";
+    secondchosenQuestionEl.style.display = "none";
+    secondchosenAnswer0El.style.display = "none";
+    secondchosenAnswer1El.style.display = "none";
+    secondchosenAnswer2El.style.display = "none";
+    secondchosenAnswer3El.style.display = "none";
+
+    thirdchosenQuestionEl.textContent = questionsEl[currentQuestion2].title
+    thirdchosenAnswer0El.textContent = questionsEl[currentQuestion2].choices[0]
+    thirdchosenAnswer1El.textContent = questionsEl[currentQuestion2].choices[1]
+    thirdchosenAnswer2El.textContent = questionsEl[currentQuestion2].choices[2]
+    thirdchosenAnswer3El.textContent = questionsEl[currentQuestion2].choices[3]
+
+    thirdchosenAnswer0El.addEventListener("click" , function(){
+        thirdwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
 
         renderQuestion4()
     }, {once :true})
 
-    chosenAnswer1El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    thirdchosenAnswer1El.addEventListener("click" , function(){
+        thirdwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
        
         renderQuestion4()
     }, {once :true})
 
-    chosenAnswer2El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    thirdchosenAnswer2El.addEventListener("click" , function(){
+        thirdwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
         
         renderQuestion4()
     }, {once :true})
 
-    chosenAnswer3El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "RIGHT :)";
+    thirdchosenAnswer3El.addEventListener("click" , function(){
+        thirdwrongRightEl.textContent = "RIGHT :)";
         score += 5;
         removeEventListener;
         renderQuestion4()
@@ -183,37 +235,45 @@ function renderQuestion3() {
 
 //function to render fourth question to page
 function renderQuestion4() {
-    chosenQuestionEl.textContent = questionsEl[currentQuestion3].title
-    chosenAnswer0El.textContent = questionsEl[currentQuestion3].choices[0]
-    chosenAnswer1El.textContent = questionsEl[currentQuestion3].choices[1]
-    chosenAnswer2El.textContent = questionsEl[currentQuestion3].choices[2]
-    chosenAnswer3El.textContent = questionsEl[currentQuestion3].choices[3]
 
-    chosenAnswer0El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    secondwrongRightEl.style.display = "none";
+    thirdchosenQuestionEl.style.display = "none";
+    thirdchosenAnswer0El.style.display = "none";
+    thirdchosenAnswer1El.style.display = "none";
+    thirdchosenAnswer2El.style.display = "none";
+    thirdchosenAnswer3El.style.display = "none";
+
+    fourthchosenQuestionEl.textContent = questionsEl[currentQuestion3].title
+    fourthchosenAnswer0El.textContent = questionsEl[currentQuestion3].choices[0]
+    fourthchosenAnswer1El.textContent = questionsEl[currentQuestion3].choices[1]
+    fourthchosenAnswer2El.textContent = questionsEl[currentQuestion3].choices[2]
+    fourthchosenAnswer3El.textContent = questionsEl[currentQuestion3].choices[3]
+
+    fourthchosenAnswer0El.addEventListener("click" , function(){
+        fourthwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
        
         renderQuestion5()
     }, {once :true})
 
-    chosenAnswer1El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    fourthchosenAnswer1El.addEventListener("click" , function(){
+        fourthwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
 
         renderQuestion5()
     }, {once :true})
 
-    chosenAnswer2El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "RIGHT :)";
+    fourthchosenAnswer2El.addEventListener("click" , function(){
+        fourthwrongRightEl.textContent = "RIGHT :)";
         score += 5;
         removeEventListener;
         renderQuestion5();
     }, {once :true})
 
-    chosenAnswer3El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    fourthchosenAnswer3El.addEventListener("click" , function(){
+        fourthwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
        
@@ -224,34 +284,42 @@ function renderQuestion4() {
 
 //function to render fifth question to page
 function renderQuestion5() {
-    chosenQuestionEl.textContent = questionsEl[currentQuestion4].title
-    chosenAnswer0El.textContent = questionsEl[currentQuestion4].choices[0]
-    chosenAnswer1El.textContent = questionsEl[currentQuestion4].choices[1]
-    chosenAnswer2El.textContent = questionsEl[currentQuestion4].choices[2]
-    chosenAnswer3El.textContent = questionsEl[currentQuestion4].choices[3]
 
-    chosenAnswer0El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "RIGHT :)";
+    thirdwrongRightEl.style.display = "none";
+    fourthchosenQuestionEl.style.display = "none";
+    fourthchosenAnswer0El.style.display = "none";
+    fourthchosenAnswer1El.style.display = "none";
+    fourthchosenAnswer2El.style.display = "none";
+    fourthchosenAnswer3El.style.display = "none";
+
+    fifthchosenQuestionEl.textContent = questionsEl[currentQuestion4].title
+    fifthchosenAnswer0El.textContent = questionsEl[currentQuestion4].choices[0]
+    fifthchosenAnswer1El.textContent = questionsEl[currentQuestion4].choices[1]
+    fifthchosenAnswer2El.textContent = questionsEl[currentQuestion4].choices[2]
+    fifthchosenAnswer3El.textContent = questionsEl[currentQuestion4].choices[3]
+
+    fifthchosenAnswer0El.addEventListener("click" , function(){
+        fifthwrongRightEl.textContent = "RIGHT :)";
         score += 5;
         console.log(score);
         removeEventListener;
     }, {once :true})
 
-    chosenAnswer1El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    fifthchosenAnswer1El.addEventListener("click" , function(){
+        fifthwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
        
     }, {once :true})
 
-    chosenAnswer2El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    fifthchosenAnswer2El.addEventListener("click" , function(){
+        fifthwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
     }, {once :true})
 
-    chosenAnswer3El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG";
+    fifthchosenAnswer3El.addEventListener("click" , function(){
+        fifthwrongRightEl.textContent = "WRONG";
         timeLeft -=10;
         removeEventListener;
        

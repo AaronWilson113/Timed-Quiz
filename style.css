@@ -4,7 +4,9 @@
     justify-content:flex-end;
 }
 
-
+#score-text {
+    justify-content:flex-start;
+}
 
 #welcome-page {
     display:flex;
@@ -15,7 +17,7 @@
 
 }
 
-#question {
+.question {
     display:flex;
     justify-content:center;
     font-size:70px;
@@ -39,7 +41,7 @@
         
 }
 
-#wrong-right {
+.wrong-right {
     font-style:italic;
     margin-left:680px;
     margin-top:20px;
