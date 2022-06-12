@@ -27,12 +27,12 @@ var chosenAnswerEl = document.querySelector("#answer");
 
 //addEvent listener to start the quiz
 startQuizBtn.addEventListener("click" , function(){
+
+    welcomePageEl.style.display = "none";
+
     startTimer();
     renderQuestion();
 }) 
-
-
-
 
 //start timer function
 function startTimer() {
