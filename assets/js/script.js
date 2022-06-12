@@ -1,9 +1,10 @@
+// variables for questions in quiz
 var questionsEl = [
-    {title: "question1 title" , choices: ["option1" , "option2" , "option3" , "option4"] , correctAnswer: "answer1placeholder"} ,
-    {title: "question2 title" , choices: ["option1" , "option2" , "option3" , "option4"], correctAnswer: "answer2placeholder"} ,
-    {title: "question3 title" , choices: ["option1" , "option2" , "option3" , "option4"] , correctAnswer: "answer3placeholder"} ,
-    {title: "question4 title" , choices: ["option1" , "option2" , "option3" , "option4"] , correctAnswer: "answer4placeholder"} ,
-    {title: "question5 title" , choices: ["option1" , "option2" , "option3" , "option4"] , correctAnswer: "answer5placeholder"} ,
+    {title: "Inside which HTML element do we put the Javascript?" , choices: ["<script>" , "<scripting>" , "<js>" , "<javascript>"] , correctAnswer: "<script>"} ,
+    {title: "JavaScript is a ___ -side programming language." , choices: ["client" , "server" , "both" , "none"], correctAnswer: "both"} ,
+    {title: "Which JavaScript label catches all the values, except for the ones specified?" , choices: ["catch" , "label" , "try" , "default"] , correctAnswer: "default"} ,
+    {title: "Which are the correct “if” statements to execute certain code if “x” is equal to 2?" , choices: ["if(x2)" , "if(x=2)" , "if(x==2)" , "if(x!=2)"] , correctAnswer: "if(x==2"} ,
+    {title: "What will the code return? Boolean(3 < 7)" , choices: ["true" , "false" , "Nan" , "SyntaxError"] , correctAnswer: "true"} ,
 ]
 
 
