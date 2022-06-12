@@ -68,8 +68,13 @@ var fifthchosenAnswer0El = document.querySelector("#fifthanswer0");
 var fifthchosenAnswer1El = document.querySelector("#fifthanswer1");
 var fifthchosenAnswer2El = document.querySelector("#fifthanswer2");
 var fifthchosenAnswer3El = document.querySelector("#fifthanswer3");
-var fifthwrongRightEl = document.querySelector("#fifthwrong-right")
+var fifthwrongRightEl = document.querySelector("#fifthwrong-right");
 
+firstquestionPageEl.style.display = "none";
+secondquestionPageEl.style.display = "none";
+thirdquestionPageEl.style.display = "none";
+fourthquestionPageEl.style.display = "none";
+fifthquestionPageEl.style.display = "none";
 
 //addEvent listener to start the quiz
 startQuizBtn.addEventListener("click" , function(){
@@ -95,6 +100,8 @@ function startTimer() {
 
 // function to render first question to the page 
 function renderQuestion() {
+
+    firstquestionPageEl.style.display = "block";
 
     firstchosenQuestionEl.textContent = questionsEl[currentQuestion].title
     firstchosenAnswer0El.textContent = questionsEl[currentQuestion].choices[0]
@@ -138,6 +145,8 @@ function renderQuestion() {
 
 //function to render second question to page 
 function renderQuestion2() {
+
+    secondquestionPageEl.style.display = "block";
 
     firstchosenQuestionEl.style.display = "none";
     firstchosenAnswer0El.style.display = "none";
@@ -186,6 +195,8 @@ function renderQuestion2() {
 
 //function to render third question to page
 function renderQuestion3() {
+
+    thirdquestionPageEl.style.display = "block";
 
     firstwrongRightEl.style.display = "none";
     secondchosenQuestionEl.style.display = "none";
@@ -236,6 +247,8 @@ function renderQuestion3() {
 //function to render fourth question to page
 function renderQuestion4() {
 
+    fourthquestionPageEl.style.display = "block";
+
     secondwrongRightEl.style.display = "none";
     thirdchosenQuestionEl.style.display = "none";
     thirdchosenAnswer0El.style.display = "none";
@@ -284,6 +297,8 @@ function renderQuestion4() {
 
 //function to render fifth question to page
 function renderQuestion5() {
+
+    fifthquestionPageEl.style.display = "block";
 
     thirdwrongRightEl.style.display = "none";
     fourthchosenQuestionEl.style.display = "none";
