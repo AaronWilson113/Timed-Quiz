@@ -14,9 +14,26 @@
 }
 
 #question {
+    display:flex;
+    justify-content:center;
     font-size:100px;
+    margin-top:30px;
+    
+}
+
+
+#buttons {
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+
 }
 
 .button-answer {
     font-size:40px;
+    margin-right:700px;
+    margin-left:340px;
+    margin-top:20px;
+    
+    
 }
