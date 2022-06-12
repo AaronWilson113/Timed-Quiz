@@ -67,31 +67,32 @@ function renderQuestion() {
 
     chosenAnswer0El.addEventListener("click" , function(){
         wrongRightEl.textContent = "Right :)";
-        removeEventListener
+        score += 5;
+        removeEventListener;
         renderQuestion2()
         
     }, {once :true})
 
     chosenAnswer1El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
         renderQuestion2()
         
     }, {once :true})
 
     chosenAnswer2El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
         renderQuestion2()
         
     }, {once :true})
 
     chosenAnswer3El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
         renderQuestion2()
         
     }, {once :true})
@@ -108,31 +109,31 @@ function renderQuestion2() {
 
     chosenAnswer0El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
         renderQuestion3()
         ;
     }, {once :true})
 
     chosenAnswer1El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
-        renderQuestion3()
-        ;
+        timeLeft -=10;
+        removeEventListener;
+        renderQuestion3();
     }, {once :true})
 
     chosenAnswer2El.addEventListener("click" , function(){
         wrongRightEl.textContent = "RIGHT :)";
-        removeEventListener
+        score += 5;
+        removeEventListener;
         renderQuestion3()
         ;
     }, {once :true})
 
     chosenAnswer3El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
         renderQuestion3()
         ;
     }, {once :true})
@@ -149,31 +150,32 @@ function renderQuestion3() {
 
     chosenAnswer0El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
 
         renderQuestion4()
     }, {once :true})
 
     chosenAnswer1El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
        
         renderQuestion4()
     }, {once :true})
 
     chosenAnswer2El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
         
         renderQuestion4()
     }, {once :true})
 
     chosenAnswer3El.addEventListener("click" , function(){
         wrongRightEl.textContent = "RIGHT :)";
-        removeEventListener
+        score += 5;
+        removeEventListener;
         renderQuestion4()
     }, {once :true})
 
@@ -189,30 +191,31 @@ function renderQuestion4() {
 
     chosenAnswer0El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
        
         renderQuestion5()
     }, {once :true})
 
     chosenAnswer1El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
 
         renderQuestion5()
     }, {once :true})
 
     chosenAnswer2El.addEventListener("click" , function(){
         wrongRightEl.textContent = "RIGHT :)";
-        removeEventListener
-        renderQuestion5()
+        score += 5;
+        removeEventListener;
+        renderQuestion5();
     }, {once :true})
 
     chosenAnswer3El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
        
         renderQuestion5()
     }, {once :true})
@@ -229,26 +232,28 @@ function renderQuestion5() {
 
     chosenAnswer0El.addEventListener("click" , function(){
         wrongRightEl.textContent = "RIGHT :)";
-        removeEventListener
+        score += 5;
+        console.log(score);
+        removeEventListener;
     }, {once :true})
 
     chosenAnswer1El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
        
     }, {once :true})
 
     chosenAnswer2El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
     }, {once :true})
 
     chosenAnswer3El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG";
-        timeLeft -=10
-        removeEventListener
+        timeLeft -=10;
+        removeEventListener;
        
     }, {once :true})
 
