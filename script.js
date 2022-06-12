@@ -1,9 +1,9 @@
 var questionsEl = [
-    {title: "question1 title" , choices: "choices1 placeholder" , correctAnswer: "answer1placeholder"} ,
-    {title: "question2 title" , choices: "choices2 placeholder" , correctAnswer: "answer2placeholder"} ,
-    {title: "question3 title" , choices: "choices3 placeholder" , correctAnswer: "answer3placeholder"} ,
-    {title: "question4 title" , choices: "choices4 placeholder" , correctAnswer: "answer4placeholder"} ,
-    {title: "question5 title" , choices: "choices5 placeholder" , correctAnswer: "answer5placeholder"} ,
+    {title: "question1 title" , choices: ["option1" , "option2" , "option3" , "option4"] , correctAnswer: "answer1placeholder"} ,
+    {title: "question2 title" , choices: ["option1" , "option2" , "option3" , "option4"], correctAnswer: "answer2placeholder"} ,
+    {title: "question3 title" , choices: ["option1" , "option2" , "option3" , "option4"] , correctAnswer: "answer3placeholder"} ,
+    {title: "question4 title" , choices: ["option1" , "option2" , "option3" , "option4"] , correctAnswer: "answer4placeholder"} ,
+    {title: "question5 title" , choices: ["option1" , "option2" , "option3" , "option4"] , correctAnswer: "answer5placeholder"} ,
 ]
 
 
@@ -20,6 +20,7 @@ var timerEl = document.querySelector("#timer")
 var timerTextEl = document.querySelector("#timer-text")
 //Selecting quiz elements 
 var chosenQuestionEl = document.querySelector("#question");
+var chosenChoicesEl = document.querySelector("#choices")
 var chosenAnswerEl = document.querySelector("#answer");
 
 
@@ -55,10 +56,6 @@ function startTimer() {
 function renderQuestion() {
 
     chosenQuestionEl.textContent = questionsEl[currentQuestion].title
-    
-    for (let i = 0; i <chosenAnswerEl; i++) {
-        chosenAnswerEl.children[i].children[0].textContent =`${(i + 1)}: ${questionsEl[currentQuestion].choices[i]}`;
-
-    }
+    chosenAnswerEl.textContent = questionsEl[currentQuestion].choices
 }
 
