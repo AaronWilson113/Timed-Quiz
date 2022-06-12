@@ -16,6 +16,7 @@ var currentQuestion1 = 1;
 var currentQuestion2 = 2;
 var currentQuestion3 = 3;
 var currentQuestion4 = 4;
+var score = 0;
 // selecting welcome page elements 
 var startQuizBtn = document.querySelector("#start-quiz");
 var welcomePageEl = document.querySelector("#welcome-page")
@@ -65,7 +66,7 @@ function renderQuestion() {
     chosenAnswer3El.textContent = questionsEl[currentQuestion].choices[3]
 
     chosenAnswer0El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG"
+        wrongRightEl.textContent = "Right :)"
         renderQuestion2()
     })
 
@@ -105,7 +106,7 @@ function renderQuestion2() {
     })
 
     chosenAnswer2El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG"
+        wrongRightEl.textContent = "RIGHT :)"
         renderQuestion3()
     })
 
@@ -140,7 +141,7 @@ function renderQuestion3() {
     })
 
     chosenAnswer3El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG"
+        wrongRightEl.textContent = "RIGHT :)"
         renderQuestion4()
     })
 
@@ -165,7 +166,7 @@ function renderQuestion4() {
     })
 
     chosenAnswer2El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG"
+        wrongRightEl.textContent = "RIGHT :)"
         renderQuestion5()
     })
 
@@ -185,7 +186,7 @@ function renderQuestion5() {
     chosenAnswer3El.textContent = questionsEl[currentQuestion4].choices[3]
 
     chosenAnswer0El.addEventListener("click" , function(){
-        wrongRightEl.textContent = "WRONG"
+        wrongRightEl.textContent = "RIGHT :)"
     })
 
     chosenAnswer1El.addEventListener("click" , function(){
