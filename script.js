@@ -26,17 +26,13 @@ var chosenAnswerEl = document.querySelector("#answer");
 
 
 //addEvent listener to start the quiz
-startQuizBtn.addEventListener("click" , beginTheQuiz)
-
-
-
-//function to start the quiz
-function beginTheQuiz() {
-
-
+startQuizBtn.addEventListener("click" , function(){
     startTimer();
     renderQuestion();
-}
+}) 
+
+
+
 
 //start timer function
 function startTimer() {
