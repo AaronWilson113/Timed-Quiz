@@ -11,6 +11,7 @@ var questionsEl = [
 //Variables
 var body = document.body;
 var currentQuestion = 0
+var currentQuestion1 = 1
 
 // selecting welcome page elements 
 var startQuizBtn = document.querySelector("#start-quiz");
@@ -59,6 +60,36 @@ function renderQuestion() {
     chosenAnswer1El.textContent = questionsEl[currentQuestion].choices[1]
     chosenAnswer2El.textContent = questionsEl[currentQuestion].choices[2]
     chosenAnswer3El.textContent = questionsEl[currentQuestion].choices[3]
+
+    chosenAnswer0El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion2()
+    })
+
+    chosenAnswer1El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion2()
+    })
+
+    chosenAnswer2El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion2()
+    })
+
+    chosenAnswer3El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion2()
+    })
+
+}
+
+//function to render second question to page 
+function renderQuestion2() {
+    chosenQuestionEl.textContent = questionsEl[currentQuestion1].title
+    chosenAnswer0El.textContent = questionsEl[currentQuestion1].choices[0]
+    chosenAnswer1El.textContent = questionsEl[currentQuestion1].choices[1]
+    chosenAnswer2El.textContent = questionsEl[currentQuestion1].choices[2]
+    chosenAnswer3El.textContent = questionsEl[currentQuestion1].choices[3]
 
     chosenAnswer0El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG"
