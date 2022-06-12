@@ -25,7 +25,7 @@ var chosenAnswer0El = document.querySelector("#answer0");
 var chosenAnswer1El = document.querySelector("#answer1");
 var chosenAnswer2El = document.querySelector("#answer2");
 var chosenAnswer3El = document.querySelector("#answer3");
-
+var wrongRightEl = document.querySelector("#wrong-right")
 
 
 //addEvent listener to start the quiz
@@ -59,5 +59,10 @@ function renderQuestion() {
     chosenAnswer1El.textContent = questionsEl[currentQuestion].choices[1]
     chosenAnswer2El.textContent = questionsEl[currentQuestion].choices[2]
     chosenAnswer3El.textContent = questionsEl[currentQuestion].choices[3]
+
+    chosenAnswer0El.addEventListener("click" , function(){
+
+    })
+
 }
 
