@@ -10,9 +10,11 @@ var questionsEl = [
 
 //Variables
 var body = document.body;
-var currentQuestion = 0
-var currentQuestion1 = 1
-
+var currentQuestion = 0;
+var currentQuestion1 = 1;
+var currentQuestion2 = 2;
+var currentQuestion3 = 3;
+var currentQuestion4 = 4;
 // selecting welcome page elements 
 var startQuizBtn = document.querySelector("#start-quiz");
 var welcomePageEl = document.querySelector("#welcome-page")
@@ -93,6 +95,96 @@ function renderQuestion2() {
 
     chosenAnswer0El.addEventListener("click" , function(){
         wrongRightEl.textContent = "WRONG"
+        renderQuestion3()
+    })
+
+    chosenAnswer1El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion3()
+    })
+
+    chosenAnswer2El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion3()
+    })
+
+    chosenAnswer3El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion3()
+    })
+
+}
+
+//function to render third question to page
+function renderQuestion3() {
+    chosenQuestionEl.textContent = questionsEl[currentQuestion2].title
+    chosenAnswer0El.textContent = questionsEl[currentQuestion2].choices[0]
+    chosenAnswer1El.textContent = questionsEl[currentQuestion2].choices[1]
+    chosenAnswer2El.textContent = questionsEl[currentQuestion2].choices[2]
+    chosenAnswer3El.textContent = questionsEl[currentQuestion2].choices[3]
+
+    chosenAnswer0El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion4()
+    })
+
+    chosenAnswer1El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion4()
+    })
+
+    chosenAnswer2El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion4()
+    })
+
+    chosenAnswer3El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion4()
+    })
+
+}
+
+//function to render fourth question to page
+function renderQuestion4() {
+    chosenQuestionEl.textContent = questionsEl[currentQuestion3].title
+    chosenAnswer0El.textContent = questionsEl[currentQuestion3].choices[0]
+    chosenAnswer1El.textContent = questionsEl[currentQuestion3].choices[1]
+    chosenAnswer2El.textContent = questionsEl[currentQuestion3].choices[2]
+    chosenAnswer3El.textContent = questionsEl[currentQuestion3].choices[3]
+
+    chosenAnswer0El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion5()
+    })
+
+    chosenAnswer1El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion5()
+    })
+
+    chosenAnswer2El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion5()
+    })
+
+    chosenAnswer3El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
+        renderQuestion5()
+    })
+
+}
+
+//function to render fifth question to page
+function renderQuestion5() {
+    chosenQuestionEl.textContent = questionsEl[currentQuestion4].title
+    chosenAnswer0El.textContent = questionsEl[currentQuestion4].choices[0]
+    chosenAnswer1El.textContent = questionsEl[currentQuestion4].choices[1]
+    chosenAnswer2El.textContent = questionsEl[currentQuestion4].choices[2]
+    chosenAnswer3El.textContent = questionsEl[currentQuestion4].choices[3]
+
+    chosenAnswer0El.addEventListener("click" , function(){
+        wrongRightEl.textContent = "WRONG"
     })
 
     chosenAnswer1El.addEventListener("click" , function(){
@@ -108,4 +200,5 @@ function renderQuestion2() {
     })
 
 }
+
 
