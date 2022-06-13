@@ -72,7 +72,11 @@ var fifthwrongRightEl = document.querySelector("#fifthwrong-right");
 //Selecting Quiz over page elements 
 var quizInputEl = document.querySelector("#scoreInput")
 var finalScore = document.querySelector("#score")
+var submitScore = document.querySelector("#submit-score")
+var initialsofScoreEl = document.querySelector("#initials")
 
+
+//setting unused html elements to display none until they are needed
 firstquestionPageEl.style.display = "none";
 secondquestionPageEl.style.display = "none";
 thirdquestionPageEl.style.display = "none";
@@ -369,10 +373,19 @@ function renderQuizOver(){
     fifthchosenAnswer2El.style.display = "none";
     fifthchosenAnswer3El.style.display = "none";
 
+    // addeventlistener for submit score button
+    submitScore.addEventListener("click" , function(){
+        
+        var user = {
+            initials: initialsofScoreEl.value.trim(),
+            
+        }
+        
+        localStorage.setItem("score" , JSON.stringify(score));
+        localStorage.setItem("user" , JSON.stringify(user));
+    })
+
 }
-
-
-console.log(score);
 
 
 
