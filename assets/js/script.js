@@ -69,12 +69,15 @@ var fifthchosenAnswer1El = document.querySelector("#fifthanswer1");
 var fifthchosenAnswer2El = document.querySelector("#fifthanswer2");
 var fifthchosenAnswer3El = document.querySelector("#fifthanswer3");
 var fifthwrongRightEl = document.querySelector("#fifthwrong-right");
+//Selecting Quiz over page elements 
+var quizInputEl = document.querySelector("#scoreInput")
 
 firstquestionPageEl.style.display = "none";
 secondquestionPageEl.style.display = "none";
 thirdquestionPageEl.style.display = "none";
 fourthquestionPageEl.style.display = "none";
 fifthquestionPageEl.style.display = "none";
+quizInputEl.style.display = "none";
 
 //addEvent listener to start the quiz
 startQuizBtn.addEventListener("click" , function(){
@@ -318,6 +321,7 @@ function renderQuestion5() {
         fourthwrongRightEl.style.display = "none";
         score += 5;
         console.log(score);
+        renderQuizOver();
         removeEventListener;
     }, {once :true})
 
@@ -325,6 +329,7 @@ function renderQuestion5() {
         fifthwrongRightEl.textContent = "WRONG";
         fourthwrongRightEl.style.display = "none";
         timeLeft -=10;
+        renderQuizOver();
         removeEventListener;
        
     }, {once :true})
@@ -333,6 +338,7 @@ function renderQuestion5() {
         fifthwrongRightEl.textContent = "WRONG";
         fourthwrongRightEl.style.display = "none";
         timeLeft -=10;
+        renderQuizOver();
         removeEventListener;
     }, {once :true})
 
@@ -340,11 +346,28 @@ function renderQuestion5() {
         fifthwrongRightEl.textContent = "WRONG";
         fourthwrongRightEl.style.display = "none";
         timeLeft -=10;
+        renderQuizOver();
         removeEventListener;
        
     }, {once :true})
 
 }
+
+//function to render quiz over page
+function renderQuizOver(){
+
+    quizInputEl.style.display = "block";
+
+    fourthwrongRightEl.style.display = "none";
+    fifthwrongRightEl.style.display = "none";
+    fifthchosenQuestionEl.style.display = "none";
+    fifthchosenAnswer0El.style.display = "none";
+    fifthchosenAnswer1El.style.display = "none";
+    fifthchosenAnswer2El.style.display = "none";
+    fifthchosenAnswer3El.style.display = "none";
+
+}
+
 
 console.log(score);
 
