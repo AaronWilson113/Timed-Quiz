@@ -71,6 +71,7 @@ var fifthchosenAnswer3El = document.querySelector("#fifthanswer3");
 var fifthwrongRightEl = document.querySelector("#fifthwrong-right");
 //Selecting Quiz over page elements 
 var quizInputEl = document.querySelector("#scoreInput")
+var finalScore = document.querySelector("#score")
 
 firstquestionPageEl.style.display = "none";
 secondquestionPageEl.style.display = "none";
@@ -356,6 +357,8 @@ function renderQuestion5() {
 //function to render quiz over page
 function renderQuizOver(){
 
+    finalScore.textContent = score;
+    
     quizInputEl.style.display = "block";
 
     fourthwrongRightEl.style.display = "none";
