@@ -74,6 +74,7 @@ var quizInputEl = document.querySelector("#scoreInput")
 var finalScore = document.querySelector("#score")
 var submitScore = document.querySelector("#submit-score")
 var initialsofScoreEl = document.querySelector("#initials")
+//Selecting high scores elements
 
 
 //setting unused html elements to display none until they are needed
